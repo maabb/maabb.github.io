@@ -3,284 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Maabb Zakour — .NET Backend Engineer. Clean architecture, scalable APIs, and production web products." />
+  <meta name="description" content="Maabb Zakour — Software Engineer. Building things that last." />
   <meta name="theme-color" content="#1B4332" />
-  <title>Maabb Zakour | .NET Software Engineer</title>
+  <title>MZ | Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="orb orb-a" aria-hidden="true"></div>
-  <div class="orb orb-b" aria-hidden="true"></div>
-  <div class="orb orb-c" aria-hidden="true"></div>
+<body id="page-top">
+  <nav class="navbar" id="mainNav">
+    <div class="nav-inner">
+      <a class="navbar-brand" href="#page-top">Maabb Zakour</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu" aria-expanded="false">
+        Menu <i class="fa fa-bars"></i>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <header class="nav" id="nav">
-    <a class="nav-brand" href="#top">MZ<span>.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </nav>
+  <header class="masthead">
+    <div class="masthead-content">
+      <h1>MZ</h1>
+      <hr class="divider" />
+      <p class="tagline">Nothing is impossible… it only takes time</p>
+      <a class="btn btn-primary" href="#about">Find Out More</a>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-badge reveal">
-        <span class="pulse-dot"></span>
-        Open to remote · Bursa, Türkiye
-      </div>
-      <h1 class="hero-title reveal">
-        <span class="line">Maabb Zakour</span>
-        <span class="line accent">.NET Engineer</span>
-      </h1>
-      <p class="hero-lead reveal">
-        Building scalable APIs and data-driven SaaS systems in C# &amp; ASP.NET Core —
-        clean architecture, performance, and reliable production services.
+  <section class="about" id="about">
+    <div class="container narrow text-center">
+      <h2 class="section-heading">Who Am I?</h2>
+      <hr class="divider light" />
+      <p class="about-text">
+        I’m Maabb Zakour.<br /><br />
+        I met programming years ago and never really put it down. What started as curiosity turned into building
+        real systems people rely on every day — APIs, web platforms, and tools that need to stay solid under pressure.<br /><br />
+        I studied Computer Engineering at Eskisehir Technical University, and along the way I learned that good software
+        is less about clever tricks and more about clear design, patience, and shipping work you’re proud of.<br /><br />
+        Today I spend most of my time in the .NET world — crafting backends, connecting frontends when needed,
+        and exploring how AI fits into practical products. When something breaks, I dig in. When something works,
+        I still look for how to make it cleaner.
       </p>
-      <div class="hero-actions reveal">
-        <a class="btn btn-primary" href="#projects">View projects</a>
-        <a class="btn btn-ghost" href="https://github.com/maabb" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/maab-zakour" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <div class="hero-stats reveal">
-        <div class="stat">
-          <strong>5+</strong>
-          <span>Years experience</span>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio-grid">
+      <a class="portfolio-box" href="https://aliif.dev/" target="_blank" rel="noopener">
+        <div class="portfolio-bg bg-aliif"></div>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-content">
+            <div class="project-category">.NET · Astro · OIDC</div>
+            <div class="project-name">Aliif Platform</div>
+          </div>
         </div>
-        <div class="stat">
-          <strong>Clean Arch</strong>
-          <span>APIs &amp; CQRS</span>
-        </div>
-        <div class="stat">
-          <strong>AI + .NET</strong>
-          <span>Modern integrations</span>
-        </div>
-      </div>
-      <a class="scroll-hint" href="#about" aria-label="Scroll to about">
-        <span></span>
       </a>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="section-head reveal">
-        <p class="eyebrow">About</p>
-        <h2>Backend-focused. Product-minded.</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-card reveal">
-          <p>
-            I'm a .NET backend engineer with 5+ years shipping scalable REST APIs and multi-tenant SaaS platforms.
-            I care about maintainable design, clear boundaries, and services that hold up under real production load.
-          </p>
-          <p>
-            Recently I've been applying the same discipline to AI integrations in .NET — provider abstraction,
-            prompt composition — and shipping full production web products end to end.
-          </p>
-        </div>
-        <div class="about-aside reveal">
-          <div class="chip-row">
-            <span class="chip">C# / .NET</span>
-            <span class="chip">ASP.NET Core</span>
-            <span class="chip">Clean Architecture</span>
-            <span class="chip">SignalR</span>
-            <span class="chip">SQL Server</span>
-            <span class="chip">Cosmos DB</span>
-            <span class="chip">Angular</span>
-            <span class="chip">MediatR / CQRS</span>
+      <a class="portfolio-box" href="#portfolio">
+        <div class="portfolio-bg bg-ai"></div>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-content">
+            <div class="project-category">.NET · Angular · AI</div>
+            <div class="project-name">AI-Library</div>
           </div>
-          <ul class="meta-list">
-            <li><span>Location</span> Bursa, Türkiye · Remote OK</li>
-            <li><span>Education</span> B.Sc. Computer Engineering</li>
-            <li><span>Languages</span> EN · TR · AR · FR</li>
-            <li><span>Interests</span> Cybersecurity, DevOps</li>
-          </ul>
         </div>
-      </div>
-    </section>
-
-    <section class="section experience" id="experience">
-      <div class="section-head reveal">
-        <p class="eyebrow">Experience</p>
-        <h2>Where I've built</h2>
-      </div>
-      <div class="timeline">
-        <article class="timeline-item reveal">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <h3>.NET Core Backend Developer</h3>
-              <time>04/2021 – Present</time>
-            </div>
-            <p class="role-meta">Instechnologies · Remote / Florida, USA · Insurance Technologies</p>
-            <ul>
-              <li>Designed and delivered scalable REST APIs and backend services in .NET Core / ASP.NET Web API for SaaS insurance platforms</li>
-              <li>Supported multi-tenant product features with data-driven services</li>
-              <li>Built SignalR real-time communication for responsiveness and data sync</li>
-              <li>Improved SQL Server and Cosmos DB usage for production performance and scale</li>
-              <li>Raised reliability through troubleshooting, testing, security, and documentation</li>
-            </ul>
+      </a>
+      <a class="portfolio-box" href="#portfolio">
+        <div class="portfolio-bg bg-efb"></div>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-content">
+            <div class="project-category">.NET · Angular</div>
+            <div class="project-name">Tech Financial</div>
           </div>
-        </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <h3>Web Designer (Intern)</h3>
-              <time>07/2020 – 08/2020</time>
-            </div>
-            <p class="role-meta">Ester Company · Eskisehir, Turkey</p>
-            <ul>
-              <li>Implemented WebRTC real-time communication and signaling for peer-to-peer sessions</li>
-              <li>Reduced connection failures by diagnosing and fixing stability issues in live sessions</li>
-            </ul>
+        </div>
+      </a>
+      <a class="portfolio-box" href="#portfolio">
+        <div class="portfolio-bg bg-devpuls"></div>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-content">
+            <div class="project-category">.NET · Angular · DevOps</div>
+            <div class="project-name">DevPuls Simulation</div>
           </div>
-        </article>
+        </div>
+      </a>
+      <a class="portfolio-box" href="#portfolio">
+        <div class="portfolio-bg bg-signal"></div>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-content">
+            <div class="project-category">ASP.NET · SignalR</div>
+            <div class="project-name">Real-time SaaS APIs</div>
+          </div>
+        </div>
+      </a>
+      <a class="portfolio-box" href="#portfolio">
+        <div class="portfolio-bg bg-data"></div>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-content">
+            <div class="project-category">SQL Server · Cosmos DB</div>
+            <div class="project-name">Data-Driven Services</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <aside class="cta">
+    <div class="container text-center">
+      <h2>For solutions…</h2>
+    </div>
+  </aside>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading">Get In Touch!</h2>
+        <hr class="divider" />
       </div>
-    </section>
-
-    <section class="section projects" id="projects">
-      <div class="section-head reveal">
-        <p class="eyebrow">Projects</p>
-        <h2>Selected work</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card featured reveal" data-tilt>
-          <div class="project-glow"></div>
-          <div class="project-tags">
-            <span>.NET 10</span><span>Astro</span><span>OpenIddict</span><span>Live</span>
-          </div>
-          <h3>Aliif</h3>
-          <p class="project-desc">
-            End-to-end business platform — landing + admin dashboard with OIDC auth.
-            Clean Architecture backend, Wolverine CQRS, EF Core, multi-language Astro SSR frontend.
-          </p>
-          <ul class="project-points">
-            <li>Production site at aliif.dev</li>
-            <li>Embedded OpenIddict OIDC server + PKCE client</li>
-            <li>i18n: English, Arabic, Turkish</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://aliif.dev/" target="_blank" rel="noopener">Visit site →</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-tilt>
-          <div class="project-glow"></div>
-          <div class="project-tags">
-            <span>.NET 10</span><span>Angular 19</span><span>Ollama</span><span>MediatR</span>
-          </div>
-          <h3>AI-Library</h3>
-          <p class="project-desc">
-            AI-powered library chat app — catalog-aware librarian API with streaming chat UI.
-            Provider-agnostic ports via Microsoft.Extensions.AI.
-          </p>
-          <ul class="project-points">
-            <li>Layered Clean Architecture + thin MediatR handlers</li>
-            <li>Prompt builder keeps prompts testable</li>
-            <li>SSE streaming + in-memory session history</li>
-          </ul>
-        </article>
-
-        <article class="project-card reveal" data-tilt>
-          <div class="project-glow"></div>
-          <div class="project-tags">
-            <span>.NET</span><span>Angular 19</span><span>NgRx</span><span>Tailwind</span>
-          </div>
-          <h3>EFB — Tech Financial</h3>
-          <p class="project-desc">
-            Backend-first financial data platform: .NET Core APIs with Angular and Tailwind
-            for processing flows and near real-time updates.
-          </p>
-          <ul class="project-points">
-            <li>Modular .NET services, DTOs, CQRS-style commands &amp; queries</li>
-            <li>Identity, functions, and repository layers</li>
-            <li>Material + NgRx frontend with OAuth2/OIDC</li>
-          </ul>
-        </article>
-
-        <article class="project-card reveal" data-tilt>
-          <div class="project-glow"></div>
-          <div class="project-tags">
-            <span>.NET 7</span><span>Angular 16</span><span>OpenIddict</span><span>CQRS</span>
-          </div>
-          <h3>DevPuls</h3>
-          <p class="project-desc">
-            DevOps simulation &amp; project tracking — CI/CD pipelines, deployments,
-            work items with Kanban drag-and-drop, and team collaboration.
-          </p>
-          <ul class="project-points">
-            <li>Pipeline &amp; deployment visualization</li>
-            <li>NgRx state + Angular CDK drag-and-drop</li>
-            <li>OAuth2/OIDC authentication</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section skills" id="skills">
-      <div class="section-head reveal">
-        <p class="eyebrow">Skills</p>
-        <h2>Toolbox</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card reveal">
-          <h3>Backend</h3>
-          <p>C#, .NET Core, ASP.NET Core, REST APIs, SignalR, MediatR, Wolverine, OpenIddict</p>
+      <div class="contact-row">
+        <div class="contact-item">
+          <i class="fa fa-envelope-o fa-3x"></i>
+          <p><a href="mailto:maabzakour@gmail.com">maabzakour@gmail.com</a></p>
         </div>
-        <div class="skill-card reveal">
-          <h3>Data</h3>
-          <p>SQL Server, Azure Cosmos DB, EF Core, PostgreSQL, SQLite</p>
+        <div class="contact-item">
+          <i class="fa fa-phone fa-3x"></i>
+          <p><a href="tel:+905366982746">+90 536 698 27 46</a></p>
         </div>
-        <div class="skill-card reveal">
-          <h3>Architecture</h3>
-          <p>Clean Architecture, CQRS, API design, performance optimization, multi-tenant SaaS</p>
+        <div class="contact-item">
+          <i class="fa fa-github fa-3x"></i>
+          <p><a href="https://github.com/maabb" target="_blank" rel="noopener">github.com/maabb</a></p>
         </div>
-        <div class="skill-card reveal">
-          <h3>Frontend</h3>
-          <p>Angular, Tailwind CSS, Astro, NgRx, responsive UI, multi-language web</p>
-        </div>
-        <div class="skill-card reveal">
-          <h3>AI &amp; Real-time</h3>
-          <p>Microsoft.Extensions.AI, Ollama, WebRTC, SignalR streaming</p>
-        </div>
-        <div class="skill-card reveal">
-          <h3>Education &amp; awards</h3>
-          <p>B.Sc. Computer Engineering — Eskisehir Technical University · 1st Place, 13th Project Fair (2020)</p>
+        <div class="contact-item">
+          <i class="fa fa-linkedin fa-3x"></i>
+          <p><a href="https://www.linkedin.com/in/maab-zakour" target="_blank" rel="noopener">LinkedIn</a></p>
         </div>
       </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="contact-panel reveal">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's build something solid.</h2>
-        <p class="contact-lead">
-          Looking for backend-focused .NET roles where maintainable design matters.
-          Open to remote opportunities.
-        </p>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:maabzakour@gmail.com">maabzakour@gmail.com</a>
-          <a class="btn btn-ghost" href="tel:+905366982746">+90 536 698 27 46</a>
-        </div>
-        <div class="social-row">
-          <a href="https://github.com/maabb" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/maab-zakour" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://aliif.dev/" target="_blank" rel="noopener">aliif.dev</a>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Maabb Zakour · Built with care</p>
+    <p>© <span id="year"></span> Maabb Zakour</p>
   </footer>
 
   <script src="script.js"></script>
