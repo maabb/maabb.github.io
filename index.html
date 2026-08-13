@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Maabb Zakour — Software Engineer. Building things that last." />
-  <meta name="theme-color" content="#1B4332" />
-  <title>MZ | Software Engineer</title>
+  <meta name="description" content="Maabb Zakour — .NET software engineer. Backend systems, clean architecture, and AI integration on the Microsoft stack." />
+  <meta name="theme-color" content="#222" />
+  <title>Maabb Zakour · Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
@@ -15,48 +15,62 @@
 <body id="page-top">
   <nav class="navbar" id="mainNav">
     <div class="nav-inner">
-      <a class="navbar-brand" href="#page-top">Maabb Zakour</a>
+      <a class="brand" href="#page-top">Maabb Zakour</a>
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu" aria-expanded="false">
         Menu <i class="fa fa-bars"></i>
       </button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <header class="masthead">
-    <div class="masthead-content">
-      <h1>MZ</h1>
+    <div class="masthead-overlay"></div>
+    <div class="masthead-content reveal">
+      <h1>Maab Zakour<br />Software Engineer</h1>
       <hr class="divider" />
-      <p class="tagline">Nothing is impossible… it only takes time</p>
-      <a class="btn btn-primary" href="#about">Find Out More</a>
+      <p class="tagline">.Net &amp; AI</p>
+      <a class="btn btn-primary" href="#about">Explore Experience</a>
     </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
   </header>
 
   <section class="about" id="about">
     <div class="container narrow text-center">
-      <h2 class="section-heading">Who Am I?</h2>
-      <hr class="divider light" />
-      <p class="about-text">
-        I’m Maabb Zakour.<br /><br />
-        I met programming years ago and never really put it down. What started as curiosity turned into building
-        real systems people rely on every day — APIs, web platforms, and tools that need to stay solid under pressure.<br /><br />
-        I studied Computer Engineering at Eskisehir Technical University, and along the way I learned that good software
-        is less about clever tricks and more about clear design, patience, and shipping work you’re proud of.<br /><br />
-        Today I spend most of my time in the .NET world — crafting backends, connecting frontends when needed,
-        and exploring how AI fits into practical products. When something breaks, I dig in. When something works,
-        I still look for how to make it cleaner.
-      </p>
+      <h2 class="section-heading reveal">Who Am I?</h2>
+      <hr class="divider light reveal" />
+      <div class="about-text reveal">
+        <p>
+          Backend developer designing and building scalable APIs and production services
+          in C# and ASP.NET Core, with an emphasis on clean architecture
+          and systems that stay reliable under real load.
+        </p>
+        <p>
+          I hold a B.Sc. in Computer Engineering from Eskisehir Technical University.
+          Professionally I have delivered multi-tenant SaaS backends, real-time features with SignalR,
+          and data layers on SQL Server and Cosmos DB.
+        </p>
+        <p>
+          I am particularly interested in <strong>integrating AI into .NET applications</strong> —
+          local models, Microsoft.Extensions.AI, streaming interfaces, and maintainable provider abstractions.
+          DevOps and cybersecurity remain ongoing interests alongside day-to-day engineering.
+        </p>
+      </div>
     </div>
   </section>
 
   <section class="portfolio" id="portfolio">
+    <div class="container text-center portfolio-heading">
+      <h2 class="section-heading reveal">Projects</h2>
+      <hr class="divider reveal" />
+    </div>
     <div class="portfolio-grid">
-      <a class="portfolio-box" href="https://aliif.dev/" target="_blank" rel="noopener">
-        <div class="portfolio-bg bg-aliif"></div>
+      <a class="portfolio-box reveal" href="https://aliif.dev/" target="_blank" rel="noopener">
+        <div class="portfolio-bg" style="background-image:url('https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')"></div>
         <div class="portfolio-caption">
           <div class="portfolio-caption-content">
             <div class="project-category">.NET · Astro · OIDC</div>
@@ -64,8 +78,8 @@
           </div>
         </div>
       </a>
-      <a class="portfolio-box" href="#portfolio">
-        <div class="portfolio-bg bg-ai"></div>
+      <a class="portfolio-box reveal" href="#portfolio">
+        <div class="portfolio-bg" style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')"></div>
         <div class="portfolio-caption">
           <div class="portfolio-caption-content">
             <div class="project-category">.NET · Angular · AI</div>
@@ -73,8 +87,8 @@
           </div>
         </div>
       </a>
-      <a class="portfolio-box" href="#portfolio">
-        <div class="portfolio-bg bg-efb"></div>
+      <a class="portfolio-box reveal" href="#portfolio">
+        <div class="portfolio-bg" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')"></div>
         <div class="portfolio-caption">
           <div class="portfolio-caption-content">
             <div class="project-category">.NET · Angular</div>
@@ -82,17 +96,17 @@
           </div>
         </div>
       </a>
-      <a class="portfolio-box" href="#portfolio">
-        <div class="portfolio-bg bg-devpuls"></div>
+      <a class="portfolio-box reveal" href="#portfolio">
+        <div class="portfolio-bg" style="background-image:url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')"></div>
         <div class="portfolio-caption">
           <div class="portfolio-caption-content">
-            <div class="project-category">.NET · Angular · DevOps</div>
-            <div class="project-name">DevPuls Simulation</div>
+            <div class="project-category">.NET · Angular · Tailwind · CI/CD</div>
+            <div class="project-name">DevPuls</div>
           </div>
         </div>
       </a>
-      <a class="portfolio-box" href="#portfolio">
-        <div class="portfolio-bg bg-signal"></div>
+      <a class="portfolio-box reveal" href="#portfolio">
+        <div class="portfolio-bg" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')"></div>
         <div class="portfolio-caption">
           <div class="portfolio-caption-content">
             <div class="project-category">ASP.NET · SignalR</div>
@@ -100,8 +114,8 @@
           </div>
         </div>
       </a>
-      <a class="portfolio-box" href="#portfolio">
-        <div class="portfolio-bg bg-data"></div>
+      <a class="portfolio-box reveal" href="#portfolio">
+        <div class="portfolio-bg" style="background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')"></div>
         <div class="portfolio-caption">
           <div class="portfolio-caption-content">
             <div class="project-category">SQL Server · Cosmos DB</div>
@@ -112,8 +126,49 @@
     </div>
   </section>
 
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading dark reveal">Technical Skills</h2>
+        <hr class="divider reveal" />
+      </div>
+      <div class="skills-grid">
+        <div class="skill-box reveal">
+          <i class="fa fa-code fa-3x"></i>
+          <h3>Backend</h3>
+          <p>C#, .NET / ASP.NET Core, REST APIs, SignalR, MediatR, OpenIddict</p>
+        </div>
+        <div class="skill-box reveal">
+          <i class="fa fa-database fa-3x"></i>
+          <h3>Data</h3>
+          <p>SQL Server, Azure Cosmos DB, EF Core, PostgreSQL, SQLite</p>
+        </div>
+        <div class="skill-box reveal">
+          <i class="fa fa-sitemap fa-3x"></i>
+          <h3>Architecture</h3>
+          <p>Clean Architecture, CQRS, API design, multi-tenant SaaS, performance</p>
+        </div>
+        <div class="skill-box reveal">
+          <i class="fa fa-desktop fa-3x"></i>
+          <h3>Frontend</h3>
+          <p>Angular, Tailwind CSS, Astro, NgRx, responsive UI</p>
+        </div>
+        <div class="skill-box featured reveal">
+          <i class="fa fa-lightbulb-o fa-3x"></i>
+          <h3>Current Focus — AI for .NET</h3>
+          <p>Microsoft.Extensions.AI, local LLMs, streaming chat, provider-agnostic integration within clean architecture</p>
+        </div>
+        <div class="skill-box languages reveal">
+          <i class="fa fa-globe fa-3x"></i>
+          <h3>Languages</h3>
+          <p>English, Turkish, Arabic, French</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <aside class="cta">
-    <div class="container text-center">
+    <div class="container text-center reveal">
       <h2>For solutions…</h2>
     </div>
   </aside>
@@ -121,23 +176,24 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="text-center">
-        <h2 class="section-heading">Get In Touch!</h2>
-        <hr class="divider" />
+        <h2 class="section-heading dark reveal">Get In Touch</h2>
+        <hr class="divider reveal" />
+        <p class="contact-lead reveal">Bursa, Türkiye</p>
       </div>
       <div class="contact-row">
-        <div class="contact-item">
+        <div class="contact-item reveal">
           <i class="fa fa-envelope-o fa-3x"></i>
           <p><a href="mailto:maabzakour@gmail.com">maabzakour@gmail.com</a></p>
         </div>
-        <div class="contact-item">
+        <div class="contact-item reveal">
           <i class="fa fa-phone fa-3x"></i>
           <p><a href="tel:+905366982746">+90 536 698 27 46</a></p>
         </div>
-        <div class="contact-item">
+        <div class="contact-item reveal">
           <i class="fa fa-github fa-3x"></i>
           <p><a href="https://github.com/maabb" target="_blank" rel="noopener">github.com/maabb</a></p>
         </div>
-        <div class="contact-item">
+        <div class="contact-item reveal">
           <i class="fa fa-linkedin fa-3x"></i>
           <p><a href="https://www.linkedin.com/in/maab-zakour" target="_blank" rel="noopener">LinkedIn</a></p>
         </div>
