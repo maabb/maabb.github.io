@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Reveal from "./Reveal";
 
 const projects = [
@@ -36,44 +35,7 @@ const projects = [
   },
 ];
 
-function isTouchUi() {
-  return window.matchMedia("(hover: none), (pointer: coarse)").matches;
-}
-
 export default function Portfolio() {
-  const [openProject, setOpenProject] = useState(null);
-
-  useEffect(() => {
-    if (!openProject) return;
-
-    const close = (event) => {
-      if (!event.target.closest(".portfolio-box")) setOpenProject(null);
-    };
-
-    document.addEventListener("pointerdown", close);
-    return () => document.removeEventListener("pointerdown", close);
-  }, [openProject]);
-
-  const handleProjectClick = (event, project) => {
-    const hasLink = Boolean(project.href);
-
-    if (!isTouchUi()) {
-      if (!hasLink) event.preventDefault();
-      return;
-    }
-
-    if (openProject !== project.name) {
-      event.preventDefault();
-      setOpenProject(project.name);
-      return;
-    }
-
-    if (!hasLink) {
-      event.preventDefault();
-      setOpenProject(null);
-    }
-  };
-
   return (
     <section className="portfolio" id="portfolio">
       <div className="container text-center portfolio-heading">
@@ -83,33 +45,28 @@ export default function Portfolio() {
         <Reveal as="hr" className="divider" delay={0.06} />
       </div>
       <div className="portfolio-grid">
-        {projects.map((project, i) => {
-          const hasLink = Boolean(project.href);
-          return (
-            <Reveal
-              as={hasLink ? "a" : "button"}
-              type={hasLink ? undefined : "button"}
-              key={project.name}
-              className={`portfolio-box${openProject === project.name ? " is-open" : ""}`}
-              href={hasLink ? project.href : undefined}
-              target={project.external ? "_blank" : undefined}
-              rel={project.external ? "noopener noreferrer" : undefined}
-              delay={(i % 6) * 0.06}
-              onClick={(event) => handleProjectClick(event, project)}
-            >
-              <div
-                className="portfolio-bg"
-                style={{ backgroundImage: `url('${project.image}')` }}
-              ></div>
-              <div className="portfolio-caption">
-                <div className="portfolio-caption-content">
-                  <div className="project-category">{project.category}</div>
-                  <div className="project-name">{project.name}</div>
-                </div>
+        {projects.map((project, i) => (
+          <Reveal
+            as={project.href ? "a" : "div"}
+            key={project.name}
+            className="portfolio-box"
+            href={project.href}
+            target={project.external ? "_blank" : undefined}
+            rel={project.external ? "noopener noreferrer" : undefined}
+            delay={(i % 6) * 0.06}
+          >
+            <div
+              className="portfolio-bg"
+              style={{ backgroundImage: `url('${project.image}')` }}
+            ></div>
+            <div className="portfolio-caption">
+              <div className="portfolio-caption-content">
+                <div className="project-category">{project.category}</div>
+                <div className="project-name">{project.name}</div>
               </div>
-            </Reveal>
-          );
-        })}
+            </div>
+          </Reveal>
+        ))}
       </div>
     </section>
   );
