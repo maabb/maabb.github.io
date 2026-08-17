@@ -5,14 +5,26 @@ Personal portfolio inspired by a classic freelancer layout (Creative-style): her
 ## Run locally
 
 ```bash
-npx serve .
+npm install
+npm run dev
 ```
 
-Or open `index.html` in a browser.
+Build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Deploy to GitHub Pages
+
+Pushes to `main` auto-deploy via GitHub Actions to https://maabb.github.io/maabb-zakour-portfolio/
+
+Enable Pages (repo → Settings → Pages → Source: GitHub Actions).
 
 ## Stack
 
-Static HTML / CSS / JS · Open Sans + Merriweather · earthy palette (forest green, brown, orange, khaki)
+React + Vite · Open Sans + Merriweather · earthy palette
 
 ## Contact
 

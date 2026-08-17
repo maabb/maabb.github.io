@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="editor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2e4764"/>
+      <stop offset="1" stop-color="#243a52"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#editor)"/>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="26">
+    <g fill="#6a9955">
+      <text x="70" y="110">using</text>
+      <text x="210" y="110">using</text>
+      <text x="70" y="150">using</text>
+      <text x="210" y="150">using</text>
+    </g>
+    <g fill="#dcdcdc">
+      <text x="330" y="110">Microsoft.Extensions.AI;</text>
+      <text x="330" y="150">System.Data;</text>
+      <text x="330" y="190">System.Linq.Expressions;</text>
+    </g>
+
+    <text x="70" y="240" fill="#c586c0">var</text>
+    <text x="150" y="240" fill="#9cdcfe">builder</text>
+    <text x="260" y="240" fill="#dcdcdc">=</text>
+    <text x="290" y="240" fill="#9cdcfe">WebApplication</text>
+    <text x="470" y="240" fill="#dcdcdc">.CreateBuilder(args);</text>
+
+    <text x="70" y="290" fill="#6a9955">builder</text>
+    <text x="180" y="290" fill="#dcdcdc">.Services.AddSingleton&lt;</text>
+    <text x="450" y="290" fill="#4ec9b0">IChatClient</text>
+    <text x="580" y="290" fill="#dcdcdc">&gt;();</text>
+
+    <text x="70" y="340" fill="#c586c0">var</text>
+    <text x="150" y="340" fill="#9cdcfe">app</text>
+    <text x="230" y="340" fill="#dcdcdc">=</text>
+    <text x="260" y="340" fill="#9cdcfe">builder</text>
+    <text x="370" y="340" fill="#dcdcdc">.Build();</text>
+
+    <text x="70" y="390" fill="#dcdcdc">app.MapGet(</text>
+    <text x="210" y="390" fill="#ce9178">"/data"</text>
+    <text x="310" y="390" fill="#dcdcdc">, </text>
+    <text x="340" y="390" fill="#569cd6">async</text>
+    <text x="440" y="390" fill="#dcdcdc">(</text>
+    <text x="460" y="390" fill="#9cdcfe">ctx</text>
+    <text x="530" y="390" fill="#dcdcdc">) =&gt;</text>
+    <text x="620" y="390" fill="#569cd6">await</text>
+    <text x="720" y="390" fill="#9cdcfe">QueryAsync</text>
+    <text x="900" y="390" fill="#dcdcdc">(</text>
+    <text x="920" y="390" fill="#9cdcfe">ctx</text>
+    <text x="990" y="390" fill="#dcdcdc">);</text>
+
+    <text x="70" y="440" fill="#dcdcdc">app.Run();</text>
+
+    <text x="70" y="500" fill="#6a9955">// EF Core + Cosmos DB layer</text>
+
+    <text x="70" y="550" fill="#569cd6">public</text>
+    <text x="160" y="550" fill="#569cd6">static</text>
+    <text x="250" y="550" fill="#4ec9b0">async</text>
+    <text x="350" y="550" fill="#4ec9b0">Task</text>
+    <text x="440" y="550" fill="#9cdcfe">QueryAsync</text>
+    <text x="600" y="550" fill="#dcdcdc">(</text>
+    <text x="620" y="550" fill="#4ec9b0">HttpContext</text>
+    <text x="800" y="550" fill="#9cdcfe">ctx</text>
+    <text x="880" y="550" fill="#dcdcdc">)</text>
+    <text x="920" y="550" fill="#569cd6">=&gt;</text>
+
+    <text x="90" y="600" fill="#dcdcdc">await </text>
+    <text x="200" y="600" fill="#9cdcfe">db</text>
+    <text x="270" y="600" fill="#dcdcdc">.Query&lt;</text>
+    <text x="400" y="600" fill="#4ec9b0">Order</text>
+    <text x="510" y="600" fill="#dcdcdc">&gt;()</text>
+
+    <text x="90" y="650" fill="#dcdcdc">    .AsNoTracking()</text>
+    <text x="90" y="700" fill="#dcdcdc">    .Where(o =&gt; o.IsActive)</text>
+    <text x="90" y="750" fill="#dcdcdc">    .ToListAsync();</text>
+  </g>
+</svg>
