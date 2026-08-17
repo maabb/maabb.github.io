@@ -20,9 +20,9 @@ export default function About() {
             and data layers on SQL Server and Cosmos DB.
           </p>
           <p>
-            I am particularly interested in <strong>integrating AI into .NET applications</strong> —
+            I am particularly interested in <strong>integrating AI into .NET applications</strong>,
             local models, Microsoft.Extensions.AI, streaming interfaces, and maintainable provider abstractions.
-            DevOps and cybersecurity remain ongoing interests alongside day-to-day engineering.
+            DevOps and cybersecurity remain ongoing interests alongside day to day engineering.
           </p>
         </Reveal>
       </div>
