@@ -17,7 +17,7 @@ npm run preview
 
 ## Deploy to GitHub Pages
 
-Pushes to `main` auto-deploy via GitHub Actions to https://maabb.github.io/maabb-zakour-portfolio/
+Pushes to `main` auto-deploy via GitHub Actions to https://maabb.github.io/
 
 Enable Pages (repo → Settings → Pages → Source: GitHub Actions).
 
