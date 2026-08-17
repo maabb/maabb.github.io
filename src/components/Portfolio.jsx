@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Reveal from "./Reveal";
 
 const projects = [
@@ -40,7 +41,39 @@ const projects = [
   },
 ];
 
+function canHover() {
+  return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+}
+
 export default function Portfolio() {
+  const [openProject, setOpenProject] = useState(null);
+
+  useEffect(() => {
+    if (!openProject) return;
+
+    const close = (event) => {
+      if (!event.target.closest(".portfolio-box")) setOpenProject(null);
+    };
+
+    document.addEventListener("click", close);
+    return () => document.removeEventListener("click", close);
+  }, [openProject]);
+
+  const handleProjectClick = (event, project) => {
+    if (canHover()) return;
+
+    if (openProject !== project.name) {
+      event.preventDefault();
+      setOpenProject(project.name);
+      return;
+    }
+
+    if (!project.external) {
+      event.preventDefault();
+      setOpenProject(null);
+    }
+  };
+
   return (
     <section className="portfolio" id="portfolio">
       <div className="container text-center portfolio-heading">
@@ -54,11 +87,12 @@ export default function Portfolio() {
           <Reveal
             as="a"
             key={project.name}
-            className="portfolio-box"
+            className={`portfolio-box${openProject === project.name ? " is-open" : ""}`}
             href={project.href}
             target={project.external ? "_blank" : undefined}
             rel={project.external ? "noopener" : undefined}
             delay={(i % 6) * 0.06}
+            onClick={(event) => handleProjectClick(event, project)}
           >
             <div
               className="portfolio-bg"

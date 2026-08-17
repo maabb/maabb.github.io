@@ -341,7 +341,9 @@ a:hover {
   filter: saturate(0.95);
 }
 
-.portfolio-box:hover .portfolio-bg {
+.portfolio-box:hover .portfolio-bg,
+.portfolio-box:focus-within .portfolio-bg,
+.portfolio-box.is-open .portfolio-bg {
   transform: scale(1.1);
   filter: saturate(1.05) blur(1px);
 }
@@ -358,7 +360,9 @@ a:hover {
   padding: 1.5rem;
 }
 
-.portfolio-box:hover .portfolio-caption {
+.portfolio-box:hover .portfolio-caption,
+.portfolio-box:focus-within .portfolio-caption,
+.portfolio-box.is-open .portfolio-caption {
   background: rgba(193, 154, 107, 0.9);
   backdrop-filter: blur(2px);
 }
@@ -370,7 +374,9 @@ a:hover {
   color: var(--white);
 }
 
-.portfolio-box:hover .portfolio-caption-content {
+.portfolio-box:hover .portfolio-caption-content,
+.portfolio-box:focus-within .portfolio-caption-content,
+.portfolio-box.is-open .portfolio-caption-content {
   opacity: 1;
   transform: translateY(0);
 }
