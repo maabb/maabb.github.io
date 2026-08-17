@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Reveal({ as: Tag = "div", className = "", children, delay = 0, ...props }) {
   const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -10,7 +11,7 @@ export default function Reveal({ as: Tag = "div", className = "", children, dela
     if (delay) el.style.transitionDelay = `${delay}s`;
 
     if (!("IntersectionObserver" in window)) {
-      el.classList.add("visible");
+      setVisible(true);
       return;
     }
 
@@ -18,7 +19,7 @@ export default function Reveal({ as: Tag = "div", className = "", children, dela
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          entry.target.classList.add("visible");
+          setVisible(true);
           io.unobserve(entry.target);
         });
       },
@@ -30,7 +31,7 @@ export default function Reveal({ as: Tag = "div", className = "", children, dela
   }, [delay]);
 
   return (
-    <Tag ref={ref} className={`reveal ${className}`.trim()} {...props}>
+    <Tag ref={ref} className={`reveal ${className} ${visible ? "visible" : ""}`.trim()} {...props}>
       {children}
     </Tag>
   );
