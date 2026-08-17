@@ -328,8 +328,17 @@ a:hover {
 .portfolio-box {
   position: relative;
   display: block;
+  width: 100%;
   min-height: 300px;
   overflow: hidden;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: inherit;
+  font: inherit;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .portfolio-bg {

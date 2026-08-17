@@ -10,39 +10,34 @@ const projects = [
     name: "Aliif Platform",
   },
   {
-    href: "#portfolio",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
     category: ".NET · Angular · AI",
     name: "AI-Library",
   },
   {
-    href: "#portfolio",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
     category: ".NET · Angular",
     name: "Tech Financial",
   },
   {
-    href: "#portfolio",
     image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=1200&q=80",
     category: ".NET · Angular · Tailwind · CI/CD",
     name: "DevPuls",
   },
   {
-    href: "#portfolio",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
     category: "ASP.NET · SignalR",
     name: "Real-time SaaS APIs",
   },
   {
-    href: "#portfolio",
     image: `${import.meta.env.BASE_URL}images/csharp-code.svg`,
     category: "SQL Server · Cosmos DB",
     name: "Data Driven Services",
   },
 ];
 
-function canHover() {
-  return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+function isTouchUi() {
+  return window.matchMedia("(hover: none), (pointer: coarse)").matches;
 }
 
 export default function Portfolio() {
@@ -55,12 +50,17 @@ export default function Portfolio() {
       if (!event.target.closest(".portfolio-box")) setOpenProject(null);
     };
 
-    document.addEventListener("click", close);
-    return () => document.removeEventListener("click", close);
+    document.addEventListener("pointerdown", close);
+    return () => document.removeEventListener("pointerdown", close);
   }, [openProject]);
 
   const handleProjectClick = (event, project) => {
-    if (canHover()) return;
+    const hasLink = Boolean(project.href);
+
+    if (!isTouchUi()) {
+      if (!hasLink) event.preventDefault();
+      return;
+    }
 
     if (openProject !== project.name) {
       event.preventDefault();
@@ -68,7 +68,7 @@ export default function Portfolio() {
       return;
     }
 
-    if (!project.external) {
+    if (!hasLink) {
       event.preventDefault();
       setOpenProject(null);
     }
@@ -83,29 +83,33 @@ export default function Portfolio() {
         <Reveal as="hr" className="divider" delay={0.06} />
       </div>
       <div className="portfolio-grid">
-        {projects.map((project, i) => (
-          <Reveal
-            as="a"
-            key={project.name}
-            className={`portfolio-box${openProject === project.name ? " is-open" : ""}`}
-            href={project.href}
-            target={project.external ? "_blank" : undefined}
-            rel={project.external ? "noopener" : undefined}
-            delay={(i % 6) * 0.06}
-            onClick={(event) => handleProjectClick(event, project)}
-          >
-            <div
-              className="portfolio-bg"
-              style={{ backgroundImage: `url('${project.image}')` }}
-            ></div>
-            <div className="portfolio-caption">
-              <div className="portfolio-caption-content">
-                <div className="project-category">{project.category}</div>
-                <div className="project-name">{project.name}</div>
+        {projects.map((project, i) => {
+          const hasLink = Boolean(project.href);
+          return (
+            <Reveal
+              as={hasLink ? "a" : "button"}
+              type={hasLink ? undefined : "button"}
+              key={project.name}
+              className={`portfolio-box${openProject === project.name ? " is-open" : ""}`}
+              href={hasLink ? project.href : undefined}
+              target={project.external ? "_blank" : undefined}
+              rel={project.external ? "noopener noreferrer" : undefined}
+              delay={(i % 6) * 0.06}
+              onClick={(event) => handleProjectClick(event, project)}
+            >
+              <div
+                className="portfolio-bg"
+                style={{ backgroundImage: `url('${project.image}')` }}
+              ></div>
+              <div className="portfolio-caption">
+                <div className="portfolio-caption-content">
+                  <div className="project-category">{project.category}</div>
+                  <div className="project-name">{project.name}</div>
+                </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </div>
     </section>
   );
