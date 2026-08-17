@@ -1,7 +1,6 @@
 # Maabb Zakour — Portfolio
 
-Personal portfolio inspired by a classic freelancer layout (Creative-style): hero, about, project grid, contact.
-
+Personal portfolio
 ## Run locally
 
 ```bash
